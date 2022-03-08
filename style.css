@@ -1,0 +1,125 @@
+/*CSS Variables*/
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  --font-family: "Manrope", consolas;
+  --font-size-xsm: 1.2rem;
+  --font-size-sm: 1.6rem;
+  --font-size-md: 2.4rem;
+  --font-size-lg: 3rem;
+  --font-size-xl: 4rem;
+  --gap: 2rem;
+  --margin-sm: 2rem;
+  --margin-md: 3rem;
+  --item-min-height-sm: 20rem;
+  --item-min-height-md: 30rem;
+  --default-transition: 0.5s ease-in-out;
+}
+
+/*Base styles*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  background-color: var(--dark-blue);
+  letter-spacing: 1px;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+/*Reusable styles*/
+.container {
+  max-width: 50rem;
+  padding: 3rem;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.place-item-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*avice style*/
+.advice {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  background: var(--dark-grayish-blue);
+  border-radius: 2rem;
+  padding: 3rem;
+  position: relative;
+  height: auto;
+  transition: height 0.25s ease-in-out;
+}
+
+.advice__id {
+  color: var(--neon-green);
+  font-size: var(--font-size-xsm);
+  margin-bottom: var(--margin-sm);
+}
+
+.advice__quote {
+  font-size: var(--font-size-md);
+  color: var(--light-cyan);
+  margin-bottom: var(--margin-sm);
+  transition: var(--default-transition);
+}
+
+.advice__divider {
+  margin: var(--margin-sm) 0;
+  width: 100%;
+}
+
+.advice__dice {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  background: var(--neon-green);
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.advice__dice:hover,
+.advice__dice:focus {
+  box-shadow: 0px 5px 20px var(--neon-green), 0px -5px 20px var(--neon-green);
+}

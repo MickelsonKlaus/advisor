@@ -1,0 +1,22 @@
+{
+    "name": "random adviser app",
+    "short_name": "adviser", 
+    "theme_color": "#1F2632",
+    "background_color": "#1F2632",
+    "display": "standalone",
+    "start_url": ".",
+    "icons": [
+        {
+            "src": "./images/Icon-196.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "./images/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
